@@ -1,6 +1,18 @@
-# Example: Guestbook application on Kubernetes
+# Example: Guestbook application on Kubernetes/OpenShift
 
-This directory contains the source code and Kubernetes manifests for PHP
+This directory contains the source code and Kubernetes/OpenShift manifests for PHP
 Guestbook application.
 
-Follow the tutorial at https://kubernetes.io/docs/tutorials/stateless-application/guestbook/.
+You can try it on CRC(https://github.com/crc-org/crc/releases) using microshift preset.
+```
+$ crc config set preset microshift
+$ crc setup
+$ crc start
+
+$ oc create namespace demo
+$ oc config set-context --current --namespace=demo
+$ oc apply -f all-in-one/guestbook-all-in-one.yaml
+$ oc expose svc frontent
+$ oc get routes
+```
+
