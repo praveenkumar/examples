@@ -11,7 +11,7 @@ $ crc start
 
 $ oc create namespace demo
 $ oc config set-context --current --namespace=demo
-$ oc apply -f all-in-one/guestbook-all-in-one.yaml
+$ oc apply -f  https://raw.githubusercontent.com/praveenkumar/examples/master/guestbook/all-in-one/guestbook-all-in-one.yaml
 $ oc expose svc frontent
 $ oc get routes
 ```
