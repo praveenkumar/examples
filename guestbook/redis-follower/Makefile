@@ -13,7 +13,7 @@
 # limitations under the License.
 
 TAG = v3
-REGISTRY = gcr.io/google-samples
+REGISTRY = quay.io/praveenkumar
 ARCH ?= $(shell go env GOARCH)
 ALL_ARCH = amd64 arm arm64 ppc64le s390x
 
