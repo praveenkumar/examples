@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: php-redis
-        image: quay.io/praveenkumar/gb-frontend-amd64:v6
+        image: quay.io/praveenkumar/gb-frontend:v6
         resources:
           requests:
             cpu: 100m
