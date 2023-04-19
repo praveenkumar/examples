@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: php-redis
-        image: gcr.io/google-samples/gb-frontend:v4
+        image: quay.io/praveenkumar/gb-frontend-amd64:v6
         resources:
           requests:
             cpu: 100m
@@ -30,4 +30,4 @@ spec:
           # line below:
           # value: env
         ports:
-        - containerPort: 80
+        - containerPort: 8080
