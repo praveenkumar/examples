@@ -23,6 +23,9 @@ RUN pear install nrk/Predis
 # them again.
 RUN sed -i 's#ErrorLog /proc/self/fd/2#ErrorLog "|$/bin/cat 1>\&2"#' /etc/apache2/apache2.conf
 RUN sed -i 's#CustomLog /proc/self/fd/1 combined#CustomLog "|/bin/cat" combined#' /etc/apache2/apache2.conf
+RUN sed -i 's#Listen 80#Listen 8080#' /etc/apache2/ports.conf
+RUN sed -i 's#Listen 443#Listen 8443#' /etc/apache2/ports.conf
+RUN sed -i 's#VirtualHost *:80#VirtualHost *:8080#' /etc/apache2/sites-enabled/000-default.conf
 
 ADD guestbook.php /var/www/html/guestbook.php
 ADD controllers.js /var/www/html/controllers.js
